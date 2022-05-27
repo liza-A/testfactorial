@@ -1,12 +1,11 @@
-function factorial(n) {
-  let answer = 1;
-  if (n < 0)
-      return 'NaN';
-
-  for (let i = n; i >= 1; i--) {
-     answer *= i;
+//recursion method
+function factorial(num) {
+    if (num < 0) 
+          return 'NaN';
+    else if (num == 0) 
+        return 1;
+    else {
+        return (num * factorial(num - 1));
+    }
   }
-
- return answer;
-}
 module.exports = {factorial}
